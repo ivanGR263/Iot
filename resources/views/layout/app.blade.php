@@ -3,40 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title','Estadisticas IoT')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <style>body{background-color: #f7f8fb;}</style>
+    <title>@yield('title','Estadísticas IoT')</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <style>
+        body {
+            background-color: #f7f8fb;
+            font-family: "Segoe UI", Roboto, sans-serif;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff !important;
+        }
+        .nav-link {
+            color: #f1f1f1 !important;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+        footer {
+            background: linear-gradient(90deg, #f8f9fa, #f1f3f5);
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm">
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand fw-bold text-danger" href="#">
-      <i class="bi bi-cpu-fill"></i> IoT
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-cpu-fill me-1"></i> IoT
     </a>
 
-    <!-- Botones de menú -->
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Tabla</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Formulario</a></li>
+    <!-- Toggle responsive -->
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door me-1"></i> Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-table me-1"></i> Tabla</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-ui-checks me-1"></i> Formulario</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main class="container mb-5">
+<!-- CONTENIDO -->
+<main class="container my-5">
     @yield('content')
 </main>
 
+<!-- FOOTER -->
 <footer class="text-center text-muted py-4">
-    <small>Programming statistic IoT</small>
+    <small>⚡ Programming Statistic IoT — 2025</small>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Scripts -->
 @stack('js')
-
 </body>
 </html>

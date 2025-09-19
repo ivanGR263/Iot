@@ -3,12 +3,12 @@
 @section('content')
 
 <!-- Sub-encabezado tipo breadcrumb -->
-<div class="bg-light p-3 border-bottom">
+<div class="bg-gradient p-3 border-bottom text-white" style="background: linear-gradient(90deg, #0d6efd, #6610f2);">
   <div class="container">
-    <small class="text-muted">
-      ESP32 - L72 GNDR/TST →
-      <a href="#" class="text-decoration-none">ProyectoX</a> →
-      <a href="#" class="text-decoration-none">Panel demo</a> →
+    <small>
+      <i class="bi bi-cpu me-1"></i>
+      <a href="#" class="text-white text-decoration-underline">ProyectoX</a> →
+      <a href="#" class="text-white text-decoration-underline">Panel demo</a> →
       <span class="fw-bold">Ejecución de Tabla</span>
     </small>
   </div>
@@ -16,103 +16,108 @@
 
 <!-- Contenido principal -->
 <div class="container mt-4">
-    <h3 class="mb-3">Panel IoT — Monitoreo & Registros</h3>
-    <p>Gestión demo (comunicaciones del proyecto), visualización en tabla y preparación del entorno para conectar <b>SENSORES IoT</b>.</p>
+    <h2 class="mb-2 fw-bold text-primary">⚡ Panel IoT — Monitoreo & Registros</h2>
+    <p class="text-muted">Gestión avanzada de <b>comunicaciones IoT</b>, monitoreo en tiempo real y preparación para conectar <b>SENSORES</b>.</p>
 
-    <!-- Botones -->
+    <!-- Botones principales -->
     <div class="mb-4">
-        <a href="#" class="btn btn-primary">
+        <a href="#" class="btn btn-primary shadow-sm me-2">
             <i class="bi bi-plus-circle me-1"></i> Registrar dato
         </a>
-        <a href="#" class="btn btn-outline-primary">
-            <img src="{{ asset('img/tabla.png') }}" alt="tabla" width="18" class="me-1"> Ver tabla
+        <a href="#" class="btn btn-outline-primary shadow-sm">
+            <i class="bi bi-table me-1"></i> Ver tabla
         </a>
     </div>
 
-    <!-- Tarjetas principales -->
-    <div class="row">
+    <!-- Tarjetas resumen -->
+    <div class="row g-4">
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
+            <div class="card border-0 shadow-sm card-hover">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <div>
-                        <h6 class="card-title">Sensores en línea</h6>
-                        <h3>3</h3>
-                        <small>Demo (modo) - Ajustable</small>
+                        <h6 class="text-secondary">Sensores en línea</h6>
+                        <h2 class="fw-bold text-success">3</h2>
+                        <span class="badge bg-light text-dark">Demo</span>
                     </div>
-                    <img src="{{ asset('img/visual/sensor.png') }}" alt="sensor" width="28">
+                    <i class="bi bi-wifi text-success" style="font-size:2rem;"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
+            <div class="card border-0 shadow-sm card-hover">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <div>
-                        <h6 class="card-title">Última sincronización</h6>
-                        <h3>hace 2 min</h3>
-                        <small>Simulado para la demo</small>
+                        <h6 class="text-secondary">Última sincronización</h6>
+                        <h2 class="fw-bold text-info">hace 2 min</h2>
+                        <small class="text-muted">Simulado</small>
                     </div>
-                    <img src="{{ asset('img/visual/reloj.png') }}" alt="reloj" width="28">
+                    <i class="bi bi-clock-history text-info" style="font-size:2rem;"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
+            <div class="card border-0 shadow-sm card-hover">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <div>
-                        <h6 class="card-title">Base de datos</h6>
-                        <h3>MYSQL</h3>
-                        <small>Conectada vía MySQL</small>
+                        <h6 class="text-secondary">Base de datos</h6>
+                        <h2 class="fw-bold text-warning">MySQL</h2>
+                        <small class="text-muted">Conectada</small>
                     </div>
-                    <img src="{{ asset('img/visual/basedatos.png') }}" alt="bd" width="28">
+                    <i class="bi bi-database text-warning" style="font-size:2rem;"></i>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Sección de módulos -->
-    <h5 class="mt-4">Módulos</h5>
-    <div class="row">
+    <h4 class="mt-5 fw-bold text-primary">🔌 Módulos disponibles</h4>
+    <div class="row g-4 mt-2">
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="card-title">Gestión de registros</h6>
-                        <p class="card-text">Creación y gestión de registros para sensores, proyectos y pruebas.</p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                    <img src="{{ asset('img/visual/registro.png') }}" alt="registro" width="26">
+            <div class="card border-0 shadow-sm card-hover h-100">
+                <div class="card-body">
+                    <i class="bi bi-journal-check text-primary mb-2" style="font-size:1.8rem;"></i>
+                    <h6 class="fw-bold">Gestión de registros</h6>
+                    <p class="text-muted">Creación y control de registros para sensores, proyectos y pruebas.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="card-title">Dispositivos IoT</h6>
-                        <p class="card-text">Integración con dispositivos ESP32/ESP8266, almacenamiento y monitoreo.</p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                    <img src="{{ asset('img/visual/dispositivo.png') }}" alt="dispositivo" width="26">
+            <div class="card border-0 shadow-sm card-hover h-100">
+                <div class="card-body">
+                    <i class="bi bi-cpu text-success mb-2" style="font-size:1.8rem;"></i>
+                    <h6 class="fw-bold">Dispositivos IoT</h6>
+                    <p class="text-muted">Integración con ESP32/ESP8266, almacenamiento y monitoreo de datos.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm">Ver más</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm mb-3">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="card-title">Panel tiempo real</h6>
-                        <p class="card-text">Gráficos de telemetría (SO2, polvo, temperatura) con WebSockets (simulado).</p>
-                        <a href="#" class="btn btn-primary">Procesamiento</a>
-                    </div>
-                    <img src="{{ asset('img/visual/tiempo.png') }}" alt="tiempo real" width="26">
+            <div class="card border-0 shadow-sm card-hover h-100">
+                <div class="card-body">
+                    <i class="bi bi-activity text-danger mb-2" style="font-size:1.8rem;"></i>
+                    <h6 class="fw-bold">Panel tiempo real</h6>
+                    <p class="text-muted">Gráficos de telemetría (SO2, polvo, temperatura) usando WebSockets.</p>
+                    <a href="#" class="btn btn-outline-danger btn-sm">Procesar</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Estilos adicionales -->
+<style>
+    .card-hover {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+</style>
 
 @endsection
